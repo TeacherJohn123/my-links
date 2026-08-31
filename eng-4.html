@@ -1,91 +1,108 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>英檢第四級 練習區</title>
-  <!-- 載入 Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- 載入 Vue 3 -->
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <style>
-    /* 隱藏捲軸保持畫面乾淨，並優化觸控體驗 */
-    ::-webkit-scrollbar { display: none; }
-    body { -webkit-tap-highlight-color: transparent; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英檢練習 - 第四級</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-100 min-h-screen p-4 md:p-8">
+<body>
 
-  <div id="app" class="max-w-5xl mx-auto">
-    <!-- 頁首標題區塊 -->
-    <header class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white p-6 md:p-8 rounded-3xl shadow-lg mb-8 flex items-center justify-between">
-      <div>
-        <h1 class="text-3xl md:text-4xl font-bold tracking-wider mb-2">英檢第四級</h1>
-        <p class="text-indigo-100 text-sm md:text-base">線上互動練習測驗總覽 (P47 - P64)</p>
-      </div>
-      <div class="hidden md:block text-5xl opacity-80">
-        📚
-      </div>
+    <!-- 第一層：主選單 -->
+    <nav class="primary-nav">
+        <a href="index.html">🏠 首頁大廳</a>
+        <a href="eng-1.html" class="active">🌟 英檢練習</a>
+        <a href="idiom-5a-mid.html">📖 成語測驗</a>
+        <a href="vocab-1.html">🏆 單字比賽</a>
+    </nav>
+
+    <!-- 第二層：次選單 -->
+    <nav class="secondary-nav">
+        <a href="eng-1.html">英檢第一級</a>
+        <a href="eng-2.html">英檢第二級</a>
+        <a href="eng-3.html">英檢第三級</a>
+        <a href="eng-4.html" class="active">英檢第四級</a>
+    </nav>
+
+    <header class="page-header">
+        <h2>🌟 英檢練習</h2>
+        <p>第四級 練習資源</p>
     </header>
 
-    <!-- 測驗連結網格 -->
-    <main class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
-      <a 
-        v-for="item in exercises" 
-        :key="item.page" 
-        :href="item.url" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="group relative bg-white rounded-2xl p-5 shadow-sm hover:shadow-md border border-slate-100 hover:border-indigo-300 transition-all transform hover:-translate-y-1 flex flex-col items-center justify-center gap-3 cursor-pointer"
-      >
-        <!-- 裝飾性圖示背景 -->
-        <div class="w-12 h-12 bg-indigo-50 text-indigo-500 rounded-full flex items-center justify-center text-xl font-bold group-hover:bg-indigo-500 group-hover:text-white transition-colors">
-          📝
-        </div>
-        
-        <!-- 頁碼標題 -->
-        <div class="text-center">
-          <h2 class="text-lg font-bold text-slate-700 group-hover:text-indigo-700 transition-colors">
-            {{ item.page }}
-          </h2>
-          <span class="text-xs text-slate-400 font-medium">開始測驗 ➔</span>
-        </div>
-      </a>
+    <main class="link-container">
+        <a href="https://wordwall.net/tc/resource/89349107" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P47</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/89349159" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P48</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/89349124" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P49</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/89349475" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P50</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/89349614" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P51</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/89979252" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P52</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/89420380" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P53</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/89979546" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P54</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/89979689" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P55</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/89979910" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P56</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/89980352" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P57</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/89980606" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P58</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/89980840" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P59</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/89980975" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P60</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/89981221" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P61</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/90599540" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P62</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/90746396" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P63</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
+        <a href="https://wordwall.net/tc/resource/91589094" target="_blank" class="link-card">
+            <span class="link-title">英檢第四級 P64</span>
+            <span class="link-desc">點擊開啟 Wordwall 練習</span>
+        </a>
     </main>
-  </div>
 
-  <script>
-    const { createApp, ref } = Vue;
-
-    createApp({
-      setup() {
-        // 將 Wordwall 連結整理為陣列資料，方便後續擴充或維護
-        const exercises = ref([
-          { page: 'P47', url: 'https://wordwall.net/tc/resource/89349107' },
-          { page: 'P48', url: 'https://wordwall.net/tc/resource/89349159' },
-          { page: 'P49', url: 'https://wordwall.net/tc/resource/89349124' },
-          { page: 'P50', url: 'https://wordwall.net/tc/resource/89349475' },
-          { page: 'P51', url: 'https://wordwall.net/tc/resource/89349614' },
-          { page: 'P52', url: 'https://wordwall.net/tc/resource/89979252' },
-          { page: 'P53', url: 'https://wordwall.net/tc/resource/89420380' },
-          { page: 'P54', url: 'https://wordwall.net/tc/resource/89979546' },
-          { page: 'P55', url: 'https://wordwall.net/tc/resource/89979689' },
-          { page: 'P56', url: 'https://wordwall.net/tc/resource/89979910' },
-          { page: 'P57', url: 'https://wordwall.net/tc/resource/89980352' },
-          { page: 'P58', url: 'https://wordwall.net/tc/resource/89980606' },
-          { page: 'P59', url: 'https://wordwall.net/tc/resource/89980840' },
-          { page: 'P60', url: 'https://wordwall.net/tc/resource/89980975' },
-          { page: 'P61', url: 'https://wordwall.net/tc/resource/89981221' },
-          { page: 'P62', url: 'https://wordwall.net/tc/resource/90599540' },
-          { page: 'P63', url: 'https://wordwall.net/tc/resource/90746396' },
-          { page: 'P64', url: 'https://wordwall.net/tc/resource/91589094' }
-        ]);
-
-        return {
-          exercises
-        };
-      }
-    }).mount('#app');
-  </script>
 </body>
 </html>
