@@ -1,61 +1,163 @@
+/* 全局設定 */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background-color: #f4f6f9;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     color: #333;
 }
 
-header {
+/* 首頁專用樣式 */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
     text-align: center;
+}
+
+.home-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-5px);
+    background-color: #0056b3;
+}
+
+.hero-btn.green { background-color: #28a745; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3); }
+.hero-btn.green:hover { background-color: #218838; }
+
+.hero-btn.orange { background-color: #fd7e14; box-shadow: 0 4px 15px rgba(253, 126, 20, 0.3); }
+.hero-btn.orange:hover { background-color: #e36209; }
+
+/* 第一層主選單 (深色導覽列) */
+.primary-nav {
+    background-color: #2c3e50;
+    padding: 15px;
+    text-align: center;
+}
+
+.primary-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.primary-nav a:hover {
+    background-color: #34495e;
+}
+
+.primary-nav a.active {
+    color: #f1c40f; /* 亮黃色提示目前位置 */
+    border-bottom: 2px solid #f1c40f;
+}
+
+/* 第二層次選單 (淺色膠囊導覽列) */
+.secondary-nav {
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-.pagination {
-    margin-top: 15px;
-}
-
-.pagination a {
+.secondary-nav a {
     display: inline-block;
     padding: 8px 16px;
-    margin: 0 4px;
-    background-color: #ffffff;
-    color: #007bff;
+    background-color: #f8f9fa;
+    color: #6c757d;
     text-decoration: none;
-    border-radius: 6px;
-    border: 1px solid #007bff;
+    border-radius: 20px;
+    border: 1px solid #dee2e6;
+    font-size: 0.95rem;
+    transition: all 0.2s;
 }
 
-.pagination a.active, .pagination a:hover {
+.secondary-nav a:hover {
+    background-color: #e2e6ea;
+}
+
+.secondary-nav a.active {
     background-color: #007bff;
-    color: #ffffff;
+    color: white;
+    border-color: #007bff;
+}
+
+/* 內容區與卡片設計 */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
 }
 
 .link-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 15px;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
 }
 
 .link-card {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 20px;
     background-color: #ffffff;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #eaeaea;
+    transition: all 0.2s ease;
+}
+
+.link-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.15);
+    transform: translateY(-3px);
+    border-color: #007bff;
 }
 
 .link-title {
     font-weight: bold;
+    font-size: 1.2rem;
     color: #2c3e50;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .link-desc {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: #666;
 }
